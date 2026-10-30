@@ -17,6 +17,8 @@ export default defineConfig({
       files: ["**"],
       rules: {
         "func-style": "off",
+        "no-redeclare": "off",
+        "require-await": "off",
         "typescript/no-non-null-assertion": "off",
       },
     },
