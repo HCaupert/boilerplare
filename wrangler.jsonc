@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "boilerplare",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    // Only these emails can sign up.
+    "ALLOWED_EMAILS": ["you@example.com"],
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "boilerplare",
+      "migrations_dir": "migrations",
+      "migrations_pattern": "migrations/*/migration.sql",
+    },
+  ],
+}
