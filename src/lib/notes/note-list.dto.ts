@@ -1,7 +1,7 @@
 import type { z } from "zod";
 
-import { PaginationRequest } from "@/lib/pagination/pagination.dto";
+import { PageRequestDto } from "@/lib/pagination/pagination.dto";
 
-export const NoteListRequest = PaginationRequest;
+export const NoteListRequestDto = PageRequestDto;
 
-export type NoteListRequestDto = z.infer<typeof NoteListRequest>;
+export type NoteListRequestDto = z.infer<typeof NoteListRequestDto>;

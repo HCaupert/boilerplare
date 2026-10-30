@@ -14,18 +14,6 @@ The server starts on `http://localhost:8787`. `.env` holds the local development
 
 Only the emails in `ALLOWED_EMAILS` of `wrangler.jsonc` can sign up.
 
-Try the API:
-
-```sh
-curl -c cookies -H 'content-type: application/json' \
-  -d '{"email":"you@example.com","password":"password1234","name":"You"}' \
-  http://localhost:8787/api/auth/sign-up/email
-
-curl -b cookies -H 'content-type: application/json' \
-  -d '{"title":"Hello","content":"World"}' \
-  http://localhost:8787/api/notes
-```
-
 ## Deploy
 
 1. Deploy. At the first deployment, Wrangler creates the D1 database and writes its ID in `wrangler.jsonc`:

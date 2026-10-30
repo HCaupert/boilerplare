@@ -1,10 +1,10 @@
 import { z } from "zod";
 
-import { NoteContent, NoteTitle } from "./note.dto";
+import { NoteContent, NoteTitle } from "@/lib/notes/note.dto";
 
-export const NoteCreateRequest = z.strictObject({
+export const NoteCreateRequestDto = z.strictObject({
   content: NoteContent,
   title: NoteTitle,
 });
 
-export type NoteCreateRequestDto = z.infer<typeof NoteCreateRequest>;
+export type NoteCreateRequestDto = z.infer<typeof NoteCreateRequestDto>;

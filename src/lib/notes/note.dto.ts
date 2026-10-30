@@ -6,7 +6,12 @@ export const NoteTitle = z.string().trim().min(1);
 
 export const NoteContent = z.string();
 
-export const toResponseDto = (note: NoteSelect) => ({
+export type NoteResponseDto = Pick<
+  NoteSelect,
+  "id" | "title" | "content" | "createdAt" | "updatedAt"
+>;
+
+export const toResponseDto = (note: NoteSelect): NoteResponseDto => ({
   content: note.content,
   createdAt: note.createdAt,
   id: note.id,

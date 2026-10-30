@@ -1,6 +1,5 @@
+import type { Auth } from "@/lib/auth/auth";
 import { unauthorized } from "@/lib/errors/error.factory";
-
-import type { Auth } from "./auth";
 
 export function currentUser({
   auth,

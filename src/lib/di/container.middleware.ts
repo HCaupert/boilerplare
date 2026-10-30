@@ -1,8 +1,7 @@
 import { createMiddleware } from "hono/factory";
 
+import { createAppContainer } from "@/lib/di/container";
 import type { HonoEnv } from "@/lib/hono/hono.factory";
-
-import { createAppContainer } from "./container";
 
 export const containerMiddleware = createMiddleware<HonoEnv>(
   async (c, nextMiddleware) => {

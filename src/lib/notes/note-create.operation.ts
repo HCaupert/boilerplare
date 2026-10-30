@@ -1,9 +1,8 @@
 import type { CurrentUser } from "@/lib/auth/current-user";
 import type { Db } from "@/lib/db";
 import { noteTable } from "@/lib/db/schema";
-
-import type { NoteCreateRequestDto } from "./note-create.dto";
-import { toResponseDto } from "./note.dto";
+import type { NoteCreateRequestDto } from "@/lib/notes/note-create.dto";
+import { toResponseDto } from "@/lib/notes/note.dto";
 
 export function noteCreateOperation({
   db,

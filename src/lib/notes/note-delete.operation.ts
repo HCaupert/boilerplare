@@ -3,8 +3,7 @@ import { and, eq } from "drizzle-orm";
 import type { CurrentUser } from "@/lib/auth/current-user";
 import type { Db } from "@/lib/db";
 import { noteTable } from "@/lib/db/schema";
-
-import type { NoteInfoParamsDto } from "./note-info.dto";
+import type { NoteInfoParamsDto } from "@/lib/notes/note-info.dto";
 
 export function noteDeleteOperation({
   db,

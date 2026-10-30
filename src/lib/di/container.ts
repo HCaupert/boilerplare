@@ -1,13 +1,12 @@
 import { auth } from "@/lib/auth/auth";
 import { currentUser } from "@/lib/auth/current-user";
 import { db } from "@/lib/db";
+import { asFunction, asValue, createContainer } from "@/lib/di/typed-container";
 import { noteCreateOperation } from "@/lib/notes/note-create.operation";
 import { noteDeleteOperation } from "@/lib/notes/note-delete.operation";
 import { noteInfoOperation } from "@/lib/notes/note-info.operation";
 import { noteListOperation } from "@/lib/notes/note-list.operation";
 import { noteUpdateOperation } from "@/lib/notes/note-update.operation";
-
-import { asFunction, asValue, createContainer } from "./typed-container";
 
 export function createAppContainer(env: Env, headers: Headers) {
   return createContainer({

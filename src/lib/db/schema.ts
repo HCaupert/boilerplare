@@ -1,8 +1,8 @@
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
-import { user } from "./auth-schema";
+import { user } from "@/lib/db/auth-schema";
 
-export * from "./auth-schema";
+export * from "@/lib/db/auth-schema";
 
 export const noteTable = sqliteTable("note", {
   content: text("content").notNull(),
